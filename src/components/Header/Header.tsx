@@ -1,8 +1,10 @@
-import {Header as MantineHeader, Title} from '@mantine/core';
+import {Container, Header as MantineHeader, Title} from '@mantine/core';
 
 const Header = () => (
 	<MantineHeader height={56}>
-		<Title>Tier Lists</Title>
+		<Container>
+			<Title>Tier Lists</Title>
+		</Container>
 	</MantineHeader>
 );
 

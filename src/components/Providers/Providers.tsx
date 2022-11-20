@@ -7,13 +7,13 @@ import {RouterProvider} from '@tanstack/react-router';
 import queryClient from 'config/queryClient';
 import router from 'config/router';
 
-const Providers = ({children}: PropsWithChildren) => (
-	<MantineProvider withGlobalStyles withNormalizeCSS theme={{colorScheme: 'dark'}}>
-		<QueryClientProvider client={queryClient}>
-			<ReactQueryDevtools />
-			<RouterProvider router={router}>{children}</RouterProvider>
-		</QueryClientProvider>
-	</MantineProvider>
-);
-
-export default Providers;
+export default function Providers({children}: PropsWithChildren) {
+	return (
+		<MantineProvider withGlobalStyles withNormalizeCSS theme={{colorScheme: 'dark'}}>
+			<QueryClientProvider client={queryClient}>
+				<ReactQueryDevtools />
+				<RouterProvider router={router}>{children}</RouterProvider>
+			</QueryClientProvider>
+		</MantineProvider>
+	);
+}

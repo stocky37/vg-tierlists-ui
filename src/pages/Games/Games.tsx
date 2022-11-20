@@ -1,5 +1,6 @@
 import {Text, Title} from '@mantine/core';
 
+import GameSearch from 'components/GameSearch';
 import useGames from 'hooks/api/useGames';
 
 const Games = () => {
@@ -15,6 +16,7 @@ const Games = () => {
 			{data.map((game) => (
 				<Text key={game.id}>{game.name}</Text>
 			))}
+			<GameSearch />
 		</>
 	);
 };
